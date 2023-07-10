@@ -1,0 +1,5 @@
+* Na pasta Projeto, está o conteúdo do projeto que foi desenvolvido durante as aulas, contemplado tudo que foi ensinado.
+
+* Na pasta "Desafio - BUG", foi baixado na plataforma um .zip com o arquivo de html e css bagunçados, sendo necessário arrumar eles e deixar do mesmo jeito que ficou na pasta projetos.
+
+* Na pasta "Desafio intermediário" foi passado um novo desafio para desenvolvimento de uma nova tela, só que essa para fazer do zero e sozinho.
