@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!---//****************************************
+        HH    HH  EEEEEEEE  AAAAAAAA  DDDDDD
+        HH    HH  EE        AA    AA  DD    DD
+        HHHHHHHH  EEEEEEEE  AAAAAAAA  DD    DD
+        HH    HH  EE        AA    AA  DD    DD
+        HH    HH  EEEEEEEE  AA    AA  DDDDDD
+    *****************************************//--->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Eventos</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    
+    <!---//****************************************
+        BBBBBB      OOOO    DDDDDD    YY    YY
+        BB    BB  OO    OO  DD    DD  YY    YY
+        BBBBBB    OO    OO  DD    DD  YYYYYYYY
+        BB    BB  OO    OO  DD    DD     YY
+        BBBBBB      OOOO    DDDDDD       YY
+    *****************************************//--->
+    <body>
+        <div class="page">
+            <header>
+                <h1>Crie e compartilhe seu evento</h1>
+                
+                <p>
+                    O primeiro passo, é preencher esse
+                    formulário de inscrição.
+                </p>
+            </header>
+
+            <form id="frmRegister" action="" method="get">
+                <!---// [GRUPO - INFORMAÇÕES DO EVENTO]-->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>Informações do evento</legend>
+
+                        <!-- [CAMPO: Título do evento] -->
+                        <div class="input-wrapper">
+                            <label for="txtTitleEvent">
+                                Título do evento
+                                <span>(mínimo de 8 caracteres)</span>
+                            </label>
+                            <input type="text" id="txtTitleEvent" minlength="8" required>
+                        </div>
+
+                        <!-- [CAMPO: Link do evento] -->
+                        <div class="input-wrapper">
+                            <label for="txtEventURL">
+                                Link do evento
+                                <span>(comece com https://)</span>
+                            </label>
+                            <input type="url" id="txtEventURL">
+                        </div>
+
+                        <!-- [CAMPO: Whatsapp para contato] -->
+                        <div class="input-wrapper">
+                            <label for="txtWppNumber">
+                                Whatsapp para contato
+                                <span>(somente números)</span>
+                            </label>
+                            <input type="number" id="txtWppNumber">
+                        </div>
+
+                        <!-- [CAMPO: Informações extras] -->
+                        <div class="input-wrapper">
+                            <label for="txtExtraInfo">
+                                Informações extras
+                            </label>
+                            <textarea id="txtExtraInfo"></textarea>
+                        </div>
+
+                        <!-- [CAMPO: Categoria] -->
+                        <div class="input-wrapper">
+                            <label for="slcCategory">
+                                Categoria
+                            </label>
+                            <select id="slcCategory">
+                                <option value="0">Selecione uma opção * </option>
+                                <option value="live">Ao vivo</option>
+                                <option value="mentorship">Mentoria</option>
+                                <option value="podcast">Podcast</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!---// [GRUPO - PRIVACIDADE] //--->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>Privacidade</legend>
+                    
+                        <!-- [CAMPO: E-mail do administrador] -->
+                        <div class="input-wrapper">
+                            <label for="txtEmailAdm">
+                                E-mail do administrador
+                                <span>(digite um email válido)</span>
+                            </label>
+                            <input type="email" id="txtEmailAdm">
+                        </div>
+
+                        <!-- [CAMPO: Link do evento] -->
+                        <div class="input-wrapper">
+                            <label for="txtPassword">
+                                Senha de acesso para os participantes
+                                <span>(mínimo de 8 caracteres)</span>
+                            </label>
+                            <input type="password" id="txtPassword" minlength="8">
+                        </div>
+
+                        <!-- [CAMPO: Link do evento] -->
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="chkPrivateEvent">
+                            <label for="chkPrivateEvent">Evento privado</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!---// [GRUPO - DIA E HORA] //--->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>Dia e hora</legend>
+                    
+                        <div class="col-3">
+                            <!-- [CAMPO: Data] -->
+                            <div class="input-wrapper">
+                                <label for="txtDate">
+                                    Data
+                                    <span>(digite um email válido)</span>
+                                </label>
+                                <input type="date" id="txtDate">
+                            </div>
+
+                            <!-- [CAMPO: Das] -->
+                            <div class="input-wrapper">
+                                <label for="txtBegin">
+                                    Das
+                                </label>
+                                <input type="time" id="txtBegin">
+                            </div>
+                            
+                            <!-- [CAMPO: Até] -->
+                            <div class="input-wrapper">
+                                <label for="txtEnd">
+                                    Até
+                                </label>
+                                <input type="time" id="txtEnd">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <footer>
+                <input type="submit" class="button" form="frmRegister" value="Salvar evento">
+            </footer>
+        </div>
+    </body>
+</html>
