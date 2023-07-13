@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!---//****************************************
+        HH    HH  EEEEEEEE  AAAAAAAA  DDDDDD
+        HH    HH  EE        AA    AA  DD    DD
+        HHHHHHHH  EEEEEEEE  AAAAAAAA  DD    DD
+        HH    HH  EE        AA    AA  DD    DD
+        HH    HH  EEEEEEEE  AA    AA  DDDDDD
+    *****************************************//--->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Mentoria</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    
+    <!---//****************************************
+        BBBBBB      OOOO    DDDDDD    YY    YY
+        BB    BB  OO    OO  DD    DD  YY    YY
+        BBBBBB    OO    OO  DD    DD  YYYYYYYY
+        BB    BB  OO    OO  DD    DD     YY
+        BBBBBB      OOOO    DDDDDD       YY
+    *****************************************//--->
+    <body>
+        <div class="page">
+            <header>
+                <h1>Mentoria</h1>
+
+                <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+            </header>
+
+            <form id="frmMentoria" action="" method="get">
+                <!-- DIV PARA OS CAMPOS DE INFORMAÇÕES PESSOAIS -->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>INFORMAÇÕES PESSOAIS</legend>
+
+                        <div class="inputs">
+                            <div class="col-2">
+                                <div class="input-wrapper">
+                                    <label for="txtName">Nome</label>
+                                    <input type="text" id="txtName" required/>
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <label for="txtSurname">Sobrenome</label>
+                                    <input type="text" id="txtSurname"/>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="txtEmail">
+                                    Email
+                                    <span>(digite um email válido)</span>
+                                </label>
+                                <input type="email" id="txtEmail" required/>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="txtPassword">
+                                    Nome
+                                    <span>(mínimo de 6 caracteres)</span>
+                                </label>
+                                <input type="password" id="txtPassword"/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- DIV PARA OS CAMPOS DE INFORMAÇÕES DO MENTOR -->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>INFORMAÇÕES DO MENTOR</legend>
+
+                        <div class="inputs">
+                            <div class="input-wrapper">
+                                <label for="txtMentorName">
+                                    Nome do seu mentor
+                                    <span>(só o primeiro nome)</span>
+                                </label>
+                                <input type="text" id="txtMentorName" required/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- DIV PARA OS CAMPOS DE HORÁRIOS DISPONÍVEIS -->
+                <fieldset>
+                    <div class="fieldset-wrapper">
+                        <legend>SEUS HORÁRIOS DISPONÍVEIS</legend>
+
+                        <div class="inputs">
+                            <div class="subtitle-wrapper">
+                                <h2>PRIMEIRA MENTORIA</h2>
+                            
+                                <div class="col-3">
+                                    <div class="input-wrapper">
+                                        <label for="txtFirstDate">
+                                            Data
+                                            <span>(DD/MM/AAAA)</span>
+                                        </label>
+                                        <input type="date" id="txtFirstDate" required/>
+                                    </div>
+
+                                    <div class="input-wrapper">
+                                        <label for="txtFirstBegin">
+                                            Das
+                                        </label>
+                                        <input type="time" id="txtFirstBegin" required/>
+                                    </div>
+
+                                    <div class="input-wrapper">
+                                        <label for="txtFirstEnd">
+                                            Até
+                                        </label>
+                                        <input type="time" id="txtFirstEnd" required/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subtitle-wrapper">
+                                <h2>SEGUNDA MENTORIA</h2>
+                            
+                                <div class="col-3">
+                                    <div class="input-wrapper">
+                                        <label for="txtSecondDate">
+                                            Data
+                                            <span>(DD/MM/AAAA)</span>
+                                        </label>
+                                        <input type="date" id="txtSecondDate"/>
+                                    </div>
+
+                                    <div class="input-wrapper">
+                                        <label for="txtSecondBegin">
+                                            Das
+                                        </label>
+                                        <input type="time" id="txtSecondBegin"/>
+                                    </div>
+
+                                    <div class="input-wrapper">
+                                        <label for="txtSecondEnd">
+                                            Até
+                                        </label>
+                                        <input type="time" id="txtSecondEnd"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <!---// [DIV ESPECÍFICA PARA GUARDAR O CAMPO RESPONSÁVEL PELO SUBMIT DO FORM] //--->
+            <footer>
+                <input type="submit" class="button" form="frmMentoria" value="SALVAR">
+            </footer>
+        </div>
+    </body>
+</html>
