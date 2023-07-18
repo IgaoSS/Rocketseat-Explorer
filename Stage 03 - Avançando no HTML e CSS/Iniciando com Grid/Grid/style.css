@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#grid-r, #grid-c{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 30vh;
+    border: 2px solid red;
+}
+
+.grid > *{
+    border: 1px solid black;
+}
+
+/*** CSS PARA GRID DE COLUNA ***/
+#grid-c header{
+    grid-column: 1/4;
+}
+
+#grid-c main{
+    grid-column: 1/3;
+}
+
+#grid-c aside{
+    grid-column: 3/4;
+}
+
+#grid-c footer{
+    grid-column: 1/4;
+}
+
+/*** CSS PARA GRID DE LINHA ***/
+#grid-r header{
+    grid-row: 1/4;
+}
+
+#grid-r main{
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+
+#grid-r aside{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+#grid-r footer{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+/*** CSS PARA TRABALHAR COM GRID-AREA ***/
+#grid-area{
+    display: grid;
+    grid-template: 
+    "A A A" 80px
+    "B B C" 50px
+    "D D D" 80px / 1fr 2fr 1fr;
+
+    height: 30vh;
+    border: 2px solid red;
+    row-gap: 30px;
+}
+
+#grid-area header{
+    grid-area: A;
+}
+
+#grid-area main{
+    grid-area: B;
+}
+
+#grid-area aside{
+    grid-area: C;
+}
+
+#grid-area footer{
+    grid-area: D;
+}
