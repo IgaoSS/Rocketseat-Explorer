@@ -28,77 +28,83 @@
         BBBBBB      OOOO    DDDDDD       YY
     *****************************************//--->
     <body>
-        <!--- HEADER --->
-        <header>
-            <img class="logo" src="./images/logo.svg" alt="Logo do site com a pata de um gato">
+        <div class="content">
+            <!--- HEADER --->
+            <header>
+                <img class="logo" src="./images/logo.svg" alt="Logo do site com a pata de um gato" style="--delay:.2s">
 
-            <form>
-                <div class="input-wrapper">
-                    <label for="txtSearch">Pesquise por artigos</label>
-                    <input type="txtSearch" placeholder="Pesquise por artigos">
-                </div>
-            </form>
+                <form>
+                    <div class="input-wrapper">
+                        <label for="txtSearch">Pesquise por artigos</label>
+                        <input type="txtSearch" placeholder="Pesquise por artigos">
+                    </div>
+                </form>
 
-            <img class="avatar" src="./images/deadpool_avatar.png" alt="Foto de perfil do usuário">
-        </header>
+                <img class="avatar" src="./images/deadpool_avatar.png" alt="Foto de perfil do usuário">
+            </header> 
 
-        <!--- CONTEÚDO PRINCIPAL --->
-        <div class="main-content">
-            <main>
-                <img src="./images/img0.svg" alt="Imagem de um gato ao ar livre" class="main-img">
-                
-                <div class="container">
-                    <div class="top-wrapper">
-                        <h1>Seriam os gatos astronautas?</h1>
-                        
-                        <div class="rating">
-                            <button id="btnOK" class="btnRating">
-                                <img src="./images/iconPositive.svg" alt="Mão sinalizando positivo">
-                            </button>
-                            <button id="btnOK" class="btnRating">
-                                <img src="./images/iconNegative.svg" alt="Mão sinalizando negativo">
-                            </button>
-                        </div>
+            <!---// CONTENT //--->
+            <div class="container">
+                <!--- MAIN --->
+                <main>
+                    <div class="capa">
+                        <img src="./images/img0.svg" alt="" class="main-img">
                     </div>
 
-                    <p>
-                        Os gatos são animais fascinantes e cercados de mistérios.
-                        De temperamento independente e misterioso, esses felinos 
-                        são conhecidos por sua agilidade, elegância e um comportamento
-                        muitas vezes imprevisível. Contudo, recentemente, uma teoria tem
-                        ganhado espaço na internet e entre teóricos de conspiração: seriam
-                        os gatos astronautas?
-                    </p>
+                    <div class="text-wrapper">
+                        <div class="top-wrapper">
+                            <h1>Seriam os gatos astronautas?</h1>
+                            
+                            <div class="rating">
+                                <button id="btnOK" class="btnRating">
+                                    <img src="./images/iconPositive.svg" alt="Mão sinalizando positivo">
+                                </button>
+                                <button id="btnOK" class="btnRating">
+                                    <img src="./images/iconNegative.svg" alt="Mão sinalizando negativo">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Os gatos são animais fascinantes e cercados de mistérios.
+                            De temperamento independente e misterioso, esses felinos 
+                            são conhecidos por sua agilidade, elegância e um comportamento
+                            muitas vezes imprevisível. Contudo, recentemente, uma teoria tem
+                            ganhado espaço na internet e entre teóricos de conspiração: seriam
+                            os gatos astronautas?
+                        </p>
+    
+                        <p>
+                            A teoria sugere que os gatos não são animais terrestres, mas sim
+                            seres extraterrestres enviados para realizar uma missão específica
+                            em nosso planeta. Há relatos históricos que apontam para o fato de
+                            que os gatos eram considerados seres sagrados em diferentes culturas
+                            e até mesmo associados a figuras divinas. Isso poderia indicar que os
+                            gatos têm uma origem muito mais mística do que se pensava anteriormente.
+                        </p><br>
+    
+                        <p>
+                            Além disso, há teóricos que acreditam que os felinos possuem habilidades
+                            telepáticas e são capazes de se comunicar com outras espécies alienígenas.
+                            Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos
+                            reagindo a estímulos que não são perceptíveis aos seres humanos, ou até
+                            mesmo se comportando de maneira incomum durante eventos astronômicos, como
+                            uma aurora boreal. Esses e outros indícios foram interpretados como sinais
+                            de que os gatos seriam seres interplanetários.
+                        </p>
+                    </div>
+                </main>
 
-                    <p>
-                        A teoria sugere que os gatos não são animais terrestres, mas sim
-                        seres extraterrestres enviados para realizar uma missão específica
-                        em nosso planeta. Há relatos históricos que apontam para o fato de
-                        que os gatos eram considerados seres sagrados em diferentes culturas
-                        e até mesmo associados a figuras divinas. Isso poderia indicar que os
-                        gatos têm uma origem muito mais mística do que se pensava anteriormente.
-                    </p>
-
-                    <p class="p-three">
-                        Além disso, há teóricos que acreditam que os felinos possuem habilidades
-                        telepáticas e são capazes de se comunicar com outras espécies alienígenas.
-                        Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos
-                        reagindo a estímulos que não são perceptíveis aos seres humanos, ou até
-                        mesmo se comportando de maneira incomum durante eventos astronômicos, como
-                        uma aurora boreal. Esses e outros indícios foram interpretados como sinais
-                        de que os gatos seriam seres interplanetários.
-                    </p>
-                </div>
-            </main>
-
-            <aside>
-                <div class="container">
-                    <h1>Artigos relacionados</h1>
-
-                    <div class="gridArticle">
+                <!--- ASIDE --->
+                <aside>
+                    <div class="text-wrapper">
+                        <h1>Artigos relacionados</h1>
+    
                         <!--- IMAGEM 01 --->
-                        <figure class="item">
-                            <img src="./images/img1.svg" alt="Imagem de um gato">
+                        <figure class="item" style="--delay:.4s">
+                            <div class="img-details">
+                                <img src="./images/img1.svg" alt="Imagem de um gato">
+                            </div>
 
                             <figcaption class="details">
                                 <h3>Sábado preguiçoso</h3>
@@ -110,8 +116,10 @@
                         </figure>
                         
                         <!--- IMAGEM 02 --->
-                        <figure class="item">
-                            <img src="./images/img2.svg" alt="Imagem de vários gatos">
+                        <figure class="item" style="--delay:.6s">
+                            <div class="img-details">
+                                <img src="./images/img2.svg" alt="Imagem de vários gatos">
+                            </div>
                             
                             <figcaption class="details">
                                 <h3>Balaio de gatos</h3>
@@ -123,8 +131,10 @@
                         </figure>
 
                         <!--- IMAGEM 03 --->
-                        <figure class="item">
-                            <img src="./images/img3.svg" alt="Imagem de um gato ao lado de uma parede colorida">
+                        <figure class="item" style="--delay:.8s">
+                            <div class="img-details">
+                                <img src="./images/img3.svg" alt="Imagem de um gato ao lado de uma parede colorida">
+                            </div>
                             
                             <figcaption class="details">
                                 <h3>Cartela de cores</h3>
@@ -136,8 +146,10 @@
                         </figure>
 
                         <!--- IMAGEM 04 --->
-                        <figure class="item">
-                            <img src="./images/img4.svg" alt="Imagem de um gato coberto">
+                        <figure class="item" style="--delay:1s">
+                            <div class="img-details">
+                                <img src="./images/img4.svg" alt="Imagem de um gato coberto">
+                            </div>
                             
                             <figcaption class="details">
                                 <h3>Os gatos sentem frio?</h3>
@@ -149,8 +161,10 @@
                         </figure>
 
                         <!--- IMAGEM 05 --->
-                        <figure class="item">
-                            <img src="./images/img5.svg" alt="Imagem de um gato na cama">
+                        <figure class="item" style="--delay:1.2s">
+                            <div class="img-details">
+                                <img src="./images/img5.svg" alt="Imagem de um gato na cama">
+                            </div>
                             
                             <figcaption class="details">
                                 <h3>Conheça o Moacir</h3>
@@ -161,13 +175,12 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
-            </aside>
+                </aside>
+            </div>
+            
+            <footer>
+                <p>© 2023 - Rocketseat Explorer</p>
+            </footer>
         </div>
-
-        <!--- FOOTER --->
-        <footer>
-            <p>© 2023 - Rocketseat Explorer</p>
-        </footer>
     </body>
 </html>
