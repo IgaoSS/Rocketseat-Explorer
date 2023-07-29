@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!---//****************************************
+        HH    HH  EEEEEEEE  AAAAAAAA  DDDDDD
+        HH    HH  EE        AA    AA  DD    DD
+        HHHHHHHH  EEEEEEEE  AAAAAAAA  DD    DD
+        HH    HH  EE        AA    AA  DD    DD
+        HH    HH  EEEEEEEE  AA    AA  DDDDDD
+    *****************************************//--->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Jogo de adivinhação</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    </head>
+    
+    <!---//****************************************
+        BBBBBB      OOOO    DDDDDD    YY    YY
+        BB    BB  OO    OO  DD    DD  YY    YY
+        BBBBBB    OO    OO  DD    DD  YYYYYYYY
+        BB    BB  OO    OO  DD    DD     YY
+        BBBBBB      OOOO    DDDDDD       YY
+    *****************************************//--->
+    <body>
+        <main>
+            <div class="mainScreen">
+                <h1>Jogo da Adivinhação</h1>
+                <p>Adivinhe o número entre 0 e 10</p>
+                
+                <form>
+                    <input type="number" id="txtNumber" min="0" max="10">
+                    <button id="btnTry">Tentar</button>
+                </form>
+            </div>
+
+            <div class="finalScreen hide">
+                <h2>Acertou em X tentativas!</h2>
+
+                <button id="btnPlayAgain">Jogar novamente</button>
+            </div>
+
+        </main>
+    </body>
+
+    <script src="./main.js"></script>
+</html>

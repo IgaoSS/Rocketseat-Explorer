@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!---//****************************************
+        HH    HH  EEEEEEEE  AAAAAAAA  DDDDDD
+        HH    HH  EE        AA    AA  DD    DD
+        HHHHHHHH  EEEEEEEE  AAAAAAAA  DD    DD
+        HH    HH  EE        AA    AA  DD    DD
+        HH    HH  EEEEEEEE  AA    AA  DDDDDD
+    *****************************************//--->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Biscoito da sorte</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Dancing+Script&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    </head>
+    
+    <!---//****************************************
+        BBBBBB      OOOO    DDDDDD    YY    YY
+        BB    BB  OO    OO  DD    DD  YY    YY
+        BBBBBB    OO    OO  DD    DD  YYYYYYYY
+        BB    BB  OO    OO  DD    DD     YY
+        BBBBBB      OOOO    DDDDDD       YY
+    *****************************************//--->
+    <body>
+        <main>
+            <div class="gameScreen">
+                <h1>Qual é a sua sorte de hoje?</h1>
+                <p>Abra o biscoito e descubra!</p>
+                <button id="btnOpenCookie">
+                    <img src="./images/cookie.svg" alt="Biscoito da sorte fechado">
+                </button>
+            </div>
+
+            <div class="cookieOpenned hide">
+                <h2>Aqui está a sua sorte de hoje:</h2>
+                <div class="luckyMessage">
+                    <p id="txtMesssage">
+                        Se alguém está tão cansado que não possa te dar um sorriso,
+                        deixa-lhe o teu.
+                    </p>
+                </div>
+                <img src="./images/opened_cookie.svg" alt="Biscoito da sorte aberto">
+                <button id="btnOpenOtherCookie">Abrir outro biscoito</button>
+            </div>
+        </main>
+    </body>
+
+    <script src="./main.js"></script>
+</html>
