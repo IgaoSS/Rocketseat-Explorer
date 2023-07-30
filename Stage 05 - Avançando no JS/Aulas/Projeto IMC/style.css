@@ -2,279 +2,185 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root{
     font-size: 62.5%;
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
-    --hue: 195;
-    --color-white: hsl(0, 0%, 100%);
-    --color-darkblue-900: hsl(var(--hue), 91%, 25%);
-    --color-darkblue-500: hsl(var(--hue), 46%, 40%);
-    --color-black-opacity: hsla(0, 0%, 100%, 0.2);
-    --color-text-content: hsl(240, 5%, 7%);
-    --padding-side: 7%;
+    /*** CORES ***/
+    --tt-heading: #0C3440;
+    
+    --tt-label: #00453A;
+    --tt-input: #212529;
+    --ot-input: #02799D;
+    --bd-input: rgba(73, 80, 87, 0.3);
+    --tt-placeholder: rgba(73, 80, 87, 0.5);
+    --bg-input: #DCE2E9;
+    
+    --tt-button: #FFF;
+    --bg-button: #02799D;
+    --bg-button-hover: #01475C;
+    
+    --bg-error: #F03E3E;
+    --tt-error: #FFF;
 }
 
-html, body, input{
-    font-family: 'Mulish', sans-serif;
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #040924;
 }
 
-/***** [CSS GERAL DA PÁGINA] *****/
-.content{
-    display: grid;
-    grid-template-areas: 
-    'header'
-    'container'
-    'footer';
-    grid-template-rows: max-content 1fr max-content;
-    height: 100vh;
-}
-
-/***** [CSS HEADER] *****/
-header{
-    grid-area: header;
-    background: var(--color-darkblue-900);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2.6rem;
-    padding: 1.6rem var(--padding-side);
-}
-
-header form{
-    flex: 1;
-}
-
-.input-wrapper label{
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-}
-
-.input-wrapper input{
-    width: 100%;
-    padding: 1.6rem;
-    border: 0;
-    border-radius: 4px;
-    background: var(--color-black-opacity);
-    color: var(--color-white);
+body, input, button{
     font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2rem;
 }
 
-.input-wrapper input::placeholder{
-    opacity: 0.5;
-    color: var(--color-white);
-}
-
-.avatar{
-    width: 4.2rem;
-    height: 4.2rem;
-    border-radius: 50%;
-}
-
-/***** [CSS MAIN CONTENT] *****/
 .container{
-    grid-area: container;
+    height: 100vh;
     display: grid;
-    grid-template-areas: 
-    'main'
-    'aside';
-    grid-template-rows: 1fr 1fr;
-    overflow-y: scroll;
-    row-gap: 3.2rem;
+    place-content: center;
 }
 
-.text-wrapper{
-    padding-inline: var(--padding-side);
+.card{
+    padding: 4.8rem 6.4rem 6.4rem;
+    background: #FFF;
+    max-width: 42.8rem;
+    margin-inline: auto;
+
+    border-radius: .6rem;
+    background: #FFF;
+    box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.10);
 }
 
-.text-wrapper h1{
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 3.8rem;
+.title{
+    color: var(--tt-heading);
+    font-size: 3.2rem;
+    line-height: 4rem;
 }
 
-.text-wrapper p{
-    color: var(--platform-aliases-background);
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 2.6rem;
+form{
+    width: 30rem;
 }
 
-.text-wrapper h3{
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 2.9rem;
-}
-
-.text-wrapper span{
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 2.2rem;
-}
-
-/*---// MAIN //---*/
-main{
-    grid-area: main;
-}
-
-.capa{
-    overflow: hidden;
-    border-radius: .8rem;
-}
-
-main .main-img{
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-}
-
-main .main-img:hover{
-    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
-    transform: scale(1.1);
-}
-
-.top-wrapper{
-    display: grid;
-    row-gap: .8rem;
-    margin-top: 3.2rem;
-}
-
-.rating{
-    display: flex;
-    gap: 1.2rem;
+form h1{
     margin-bottom: 3.2rem;
 }
 
-.rating button{
-    background: var(--color-darkblue-900);
-    border: 0;
-    padding: 1.2rem;
-    border-radius: 50%;
-}
-
-/*---// ASIDE //---*/
-aside{
-    grid-area: aside;
-    padding-bottom: 4.1rem;
-}
-
-aside .text-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-}
-
-.item {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    border-radius: 0.8rem;
-    column-gap: 1.6rem;
-}
-
-.item .img-details{
-    border-radius: 0.8rem;
-    overflow: hidden;
-}
-
-.item img{
-    width: 100%;
-    height: 10rem;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    transition: all 200ms ease-out;
+form label{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--tt-label);
+    margin-bottom: .8rem;
     display: block;
 }
 
-.item img:hover{
-    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+form input{
+    width: 100%;
+    border: 1px solid var(--bd-input);
+    background: var(--bg-input);
+    padding: 1.6rem;
+    border-radius: .4rem;
+}
+
+form input:focus{
+    outline: 2px solid var(--ot-input);
+}
+
+form input::placeholder{
+    color: var(--tt-placeholder);
+}
+
+/*
+    * Lê-se de trás para frente
+    * Um input-wrapper que tenha anterior a ele um outro .input-wrapper;
+    * No caso, aplicou margin-top no segundo input-wrapper;
+    * Se tivesse 3 divs com essa classe, a margin-top seria aplicado no segundo e no terceiro.
+*/
+.input-wrapper + .input-wrapper{
+    margin-top: 1.6rem;
+}
+
+form button{
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+    width: 100%;
+    
+    border: none;
+    border-radius: .4rem;
+    background: var(--bg-button);
+    color: var(--tt-button);
+    
+    display: flex;
+    place-content: center;
+    gap: .8rem;
+    
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .8s;
+}
+
+form button:hover{
+    background: var(--bg-button-hover);
+}
+
+/******* [CSS PARA O MODAL] *******/
+.modal-wrapper.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper{
+    position: absolute;
+    inset: 0; /*mesmo que usar o top, bottom, left e right = 0 */
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    position: relative;
+}
+
+.modal button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.modal button:hover{
     transform: scale(1.1);
 }
 
-.details {
-    z-index: 1;
-    position: relative;
-    background: #FFF;
+/******* [CSS PARA O ALERT DE ERRO NO TOPO DA PÁGINA] *******/
+.alert-error.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/***** [CSS FOOTER] *****/
-footer{
-    grid-area: footer;
-    background: var(--color-darkblue-500);
-}
-
-footer p{
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--color-white);
+.alert-error{
+    position: absolute;
+    background: var(--bg-error);
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--tt-error);
     text-align: center;
-    padding: 2.7rem 1.6rem;
-}
+    padding-block: .8rem;
+    font-weight: 700;
 
-/***** [CSS RESPONSIVO MEDIA QUERIES] *****/
-@media (min-width: 64rem) {
-    header, .container{
-        padding-inline: var(--padding-side);
-    }
-    
-    .container{
-        grid-template-areas: 
-        'main aside';
-        grid-template-columns: 60% 37%;
-        column-gap: 3.4rem;
-        padding-top: 4.4rem;
-    }
-
-    .text-wrapper{
-        padding: 0;
-    }
-    
-    .top-wrapper {
-        display: flex;
-        margin-block: 3.2rem;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .rating {
-        margin: 0;
-    }
-
-}
-
-/***** [CSS PARA ANIMAÇÕES] *****/
-header{
-    --startY: -100%;
-    animation: move .2s;
-}
-
-footer{
-    --startY: 100%;
-    animation: move .2s;
-}
-
-@keyframes move {
-    from{
-        transform: translateY(var(--startY));
-    }    
-}
-
-.item{
-    --delay: .2s;
-    animation: appear .4s var(--delay) backwards;
-}
-
-@keyframes appear {
-    0%{
-        opacity: 0;
-        transform: scale(0.7);
-    }
-
-    50%{
-        transform: scale(1.2);
-    }
-    
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition:  transform .5s;
 }
