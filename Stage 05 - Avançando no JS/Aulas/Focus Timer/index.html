@@ -8,16 +8,17 @@
         HH    HH  EEEEEEEE  AA    AA  DDDDDD
     *****************************************//--->
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Temporizador estilo pomodoro">
+
+        <title>FocusTimer - Pomodoro</title>
         
-        <title>Blog de Gatos</title>
-        
+        <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-svg">
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+        <script type="module" src="./js/main.js" defer></script>
     </head>
     
     <!---//****************************************
@@ -28,159 +29,53 @@
         BBBBBB      OOOO    DDDDDD       YY
     *****************************************//--->
     <body>
-        <div class="content">
-            <!--- HEADER --->
-            <header>
-                <img class="logo" src="./images/logo.svg" alt="Logo do site com a pata de um gato" style="--delay:.2s">
+        <div id="app">
+            <!--- [BOTÃO DE LIGHT/DARK MODE] --->
+            <button id="toggle-mode">
+                <span class="sr-only">Dark Mode Ativado!</span>
+                <i class="ph-sun ph-bold"></i>
+                <i class="ph-moon ph-bold"></i>
+            </button>
 
-                <form>
-                    <div class="input-wrapper">
-                        <label for="txtSearch">Pesquise por artigos</label>
-                        <input type="txtSearch" placeholder="Pesquise por artigos">
-                    </div>
-                </form>
+            <!--- [TIMER] --->
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
 
-                <img class="avatar" src="./images/deadpool_avatar.png" alt="Foto de perfil do usuário">
-            </header> 
-
-            <!---// CONTENT //--->
-            <div class="container">
-                <!--- MAIN --->
-                <main>
-                    <div class="capa">
-                        <img src="./images/img0.svg" alt="" class="main-img">
-                    </div>
-
-                    <div class="text-wrapper">
-                        <div class="top-wrapper">
-                            <h1>Seriam os gatos astronautas?</h1>
-                            
-                            <div class="rating">
-                                <button id="btnOK" class="btnRating">
-                                    <img src="./images/iconPositive.svg" alt="Mão sinalizando positivo">
-                                </button>
-                                <button id="btnOK" class="btnRating">
-                                    <img src="./images/iconNegative.svg" alt="Mão sinalizando negativo">
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <p>
-                            Os gatos são animais fascinantes e cercados de mistérios.
-                            De temperamento independente e misterioso, esses felinos 
-                            são conhecidos por sua agilidade, elegância e um comportamento
-                            muitas vezes imprevisível. Contudo, recentemente, uma teoria tem
-                            ganhado espaço na internet e entre teóricos de conspiração: seriam
-                            os gatos astronautas?
-                        </p>
-    
-                        <p>
-                            A teoria sugere que os gatos não são animais terrestres, mas sim
-                            seres extraterrestres enviados para realizar uma missão específica
-                            em nosso planeta. Há relatos históricos que apontam para o fato de
-                            que os gatos eram considerados seres sagrados em diferentes culturas
-                            e até mesmo associados a figuras divinas. Isso poderia indicar que os
-                            gatos têm uma origem muito mais mística do que se pensava anteriormente.
-                        </p><br>
-    
-                        <p>
-                            Além disso, há teóricos que acreditam que os felinos possuem habilidades
-                            telepáticas e são capazes de se comunicar com outras espécies alienígenas.
-                            Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos
-                            reagindo a estímulos que não são perceptíveis aos seres humanos, ou até
-                            mesmo se comportando de maneira incomum durante eventos astronômicos, como
-                            uma aurora boreal. Esses e outros indícios foram interpretados como sinais
-                            de que os gatos seriam seres interplanetários.
-                        </p>
-                    </div>
-                </main>
-
-                <!--- ASIDE --->
-                <aside>
-                    <div class="text-wrapper">
-                        <h1>Artigos relacionados</h1>
-    
-                        <!--- IMAGEM 01 --->
-                        <figure class="item" style="--delay:.4s">
-                            <div class="img-details">
-                                <img src="./images/img1.svg" alt="Imagem de um gato">
-                            </div>
-
-                            <figcaption class="details">
-                                <h3>Sábado preguiçoso</h3>
-                                <span>
-                                    Descubra atividades interessantes para fazer com 
-                                    seu pet durante os finais de semana.
-                                </span>
-                            </figcaption>
-                        </figure>
-                        
-                        <!--- IMAGEM 02 --->
-                        <figure class="item" style="--delay:.6s">
-                            <div class="img-details">
-                                <img src="./images/img2.svg" alt="Imagem de vários gatos">
-                            </div>
-                            
-                            <figcaption class="details">
-                                <h3>Balaio de gatos</h3>
-                                <span>
-                                    Como evitar confusões entre seus gatíneos e 
-                                    acostumá-los desde filhotes.
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <!--- IMAGEM 03 --->
-                        <figure class="item" style="--delay:.8s">
-                            <div class="img-details">
-                                <img src="./images/img3.svg" alt="Imagem de um gato ao lado de uma parede colorida">
-                            </div>
-                            
-                            <figcaption class="details">
-                                <h3>Cartela de cores</h3>
-                                <span>
-                                    Seu gato é inverno intenso? Verão profundo?
-                                    Descubra as cores que mais combinam com seu bichano.
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <!--- IMAGEM 04 --->
-                        <figure class="item" style="--delay:1s">
-                            <div class="img-details">
-                                <img src="./images/img4.svg" alt="Imagem de um gato coberto">
-                            </div>
-                            
-                            <figcaption class="details">
-                                <h3>Os gatos sentem frio?</h3>
-                                <span>
-                                    Preparem-se para a frente fria que vem para
-                                    o país da melhor maneira possível.
-                                </span>
-                            </figcaption>
-                        </figure>
-
-                        <!--- IMAGEM 05 --->
-                        <figure class="item" style="--delay:1.2s">
-                            <div class="img-details">
-                                <img src="./images/img5.svg" alt="Imagem de um gato na cama">
-                            </div>
-                            
-                            <figcaption class="details">
-                                <h3>Conheça o Moacir</h3>
-                                <span>
-                                    Moacir é o gatinho da semana do nosso blog.
-                                    Venha conhecer sua história de superação.
-                                </span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </aside>
-            </div>
-            
-            <footer>
-                <p>© 2023 - Rocketseat Explorer</p>
-            </footer>
+            <!--- [BOTÕES DE CONTROLE DO TIMER] --->
+            <section id="controls" class="flex">
+                <!--- BOTÃO 1 --->
+                <button data-action="toggleRunning" class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                
+                <!--- BOTÃO 2 --->
+                <button data-action="toggleRunning" class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                
+                <!--- BOTÃO 3 --->
+                <button data-action="set" class="ph ph-timer secondary">
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+                
+                <!--- BOTÃO 4 --->
+                <button data-action="reset" class="ph ph-stop-circle secondary">
+                    <span class="sr-only">Reiniciar contador</span>
+                </button>
+                
+                <!--- BOTÃO 5 --->
+                <button data-action="toggleMusic" class="ph ph-speaker-none secondary">
+                    <span class="sr-only">Iniciar música</span>
+                </button>
+                
+                <!--- BOTÃO 6 --->
+                <button data-action="toggleMusic" class="ph ph-speaker-high">
+                    <span class="sr-only">Parar música</span>
+                </button>
+            </section>
         </div>
     </body>
 </html>
