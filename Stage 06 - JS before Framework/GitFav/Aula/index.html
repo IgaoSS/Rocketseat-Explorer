@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <!---//****************************************
+        HH    HH  EEEEEEEE  AAAAAAAA  DDDDDD
+        HH    HH  EE        AA    AA  DD    DD
+        HHHHHHHH  EEEEEEEE  AAAAAAAA  DD    DD
+        HH    HH  EE        AA    AA  DD    DD
+        HH    HH  EEEEEEEE  AA    AA  DDDDDD
+    *****************************************//--->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Github Favorites</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <!---//****************************************
+        BBBBBB      OOOO    DDDDDD    YY    YY
+        BB    BB  OO    OO  DD    DD  YY    YY
+        BBBBBB    OO    OO  DD    DD  YYYYYYYY
+        BB    BB  OO    OO  DD    DD     YY
+        BBBBBB      OOOO    DDDDDD       YY
+    *****************************************//--->
+    <body>
+        <div id="app">
+            <header>
+                <h1>Github Favorites</h1>
+
+                <div class="search">
+                    <label for="txtSearch" class="sr-only">Usuário do Github</label>
+                    <input id="txtSearch" type="text" placeholder="Usuário do Github">
+                    <button>&plus;</button>
+                </div>
+            </header>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Repositórios</th>
+                        <th>Seguidores</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="user">
+                            <img src="https://github.com/IgaoSS.png" alt="Avatar do usuário">
+                            <a href="https://github.com/IgaoSS" target="_blank">
+                                <p>Igor Sousa</p>
+                                <span>IgaoSS</span>
+                            </a>
+                        </td>
+                        <td class="repositories">
+                            100
+                        </td>
+                        <td class="followers">
+                            0
+                        </td>
+                        <td>
+                            <button class="remove">&times;</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="user">
+                            <img src="https://github.com/diego3g.png" alt="Avatar do usuário">
+                            <a href="https://github.com/diego3g" target="_blank">
+                                <p>Diego Fernandes</p>
+                                <span>diego3g</span>
+                            </a>
+                        </td>
+                        <td class="repositories">
+                            100
+                        </td>
+                        <td class="followers">
+                            0
+                        </td>
+                        <td>
+                            <button class="remove">&times;</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

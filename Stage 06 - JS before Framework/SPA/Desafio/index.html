@@ -14,12 +14,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Biscoito da sorte</title>
+        <title>Explore</title>
         
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <script src="./main.js" type="module" defer></script>
     </head>
     
     <!---//****************************************
@@ -32,13 +31,15 @@
     <body>
         <header>
             <nav>
-                <a href="/"><img src="./images/logo.svg" alt="Logo do site"></a>
-                <a href="/home" class="active">Home</a>
-                <a href="/universe">O Universo</a>
-                <a href="/explore">Exploração</a>
+                <a href="/" onclick="route()"><img src="./images/logo.svg" alt="Logo do site"></a>
+                <a href="/home" onclick="route()">Home</a>
+                <a href="/universe" onclick="route()">O Universo</a>
+                <a href="/explore" onclick="route()">Exploração</a>
             </nav>
         </header>
         
         <main></main>
+
+        <script type="module" src="./src/index.js"></script>
     </body>
 </html>
