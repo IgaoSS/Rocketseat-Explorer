@@ -64,7 +64,7 @@ h1, h2{
 }
 
 .gameScreen img:hover{
-    animation: shake 0.90s forwards alternate infinite;
+    animation: shake     0.90s forwards alternate infinite;
     transform: translate3d(0, 0, 0);
 }
 
