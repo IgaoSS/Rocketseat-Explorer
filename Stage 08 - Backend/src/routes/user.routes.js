@@ -8,6 +8,7 @@ const usersController = new UsersController();
 
 ///MÉTODO POST
 userRoutes.post("/", usersController.create);
+userRoutes.put("/:id", usersController.update);
 
 //Exportando as rotas
 module.exports = userRoutes;
